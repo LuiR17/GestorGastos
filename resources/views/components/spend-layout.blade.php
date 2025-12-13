@@ -11,10 +11,11 @@
     'resources/js/CreateAccountModal',
     'resources/js/CreateSpendModal',
     'resources/js/spend',
+    'resources/js/CreateCreditCard',
     ])
 </head>
 
-<body class="font-sans w-[90%] mx-auto flex flex-col bg-neutral-100">
+<body class="font-sans w-[90%] mx-auto flex flex-col bg-white">
     {{ $slot }}
 </body>
 
