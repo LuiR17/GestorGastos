@@ -12,6 +12,7 @@
     'resources/js/CreateSpendModal',
     'resources/js/spend',
     'resources/js/CreateCreditCard',
+    'resources/js/spendActions/show',
     ])
 </head>
 

@@ -33,14 +33,14 @@ function addSpendCard(spend) {
     const container = document.getElementById('spendsContainer');
 
     const card = document.createElement('div');
-    card.classList = "flex justify-between mt-4 border border-black rounded-lg py-1 px-4";
+    card.classList = "flex justify-between mt-4 border border-gray-200 shadow-md rounded-lg py-1 px-4";
 
     card.innerHTML = `
         <div>
-            <p>${spend.title}</p>
+            <p class="font-semibold">${spend.title}</p>
             <p>${spend.description}</p>
         </div>
-        <p>-$${spend.price}</p>
+        <p class="font-semibold">-$${spend.price}</p>
     `;
 
     container.prepend(card);

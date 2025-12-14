@@ -27,7 +27,8 @@
             <h1 class="text-8xl font-normal">$1000</h1>
             <div class="flex justify-between items-center w-[70%]">
                 <p class="p-2 font-semibold">Cuentas</p>
-                <button id="CreateAccountBtn" class="p-1 border border-gray-200 rounded-lg px-4 shadow-md">Crear +</button>
+                <button id="CreateAccountBtn" class="p-1 border border-gray-200 rounded-lg px-4 shadow-md">Crear
+                    +</button>
                 <x-create-form id="modalAccount" title="Nueva Cuenta" />
             </div>
             <div class="flex justify-between w-[70%] mt-2">
@@ -132,12 +133,14 @@
                 <p class="p-2 font-semibold">Transacciones</p>
                 <button id="CreateSpendBtn" class="p-2 border border-gray-200 rounded-lg shadow-md">Crear +</button>
                 <x-create-spend-form id="modalSpend" title="Nuevo Gasto" />
+                <x-show-modal id="spendModal" title="Gasto" />
             </div>
             <div class="w-full">
                 <p class="text-center">Diciembre 06</p>
                 <div id="spendsContainer" class="mt-4">
                     @foreach ($spends as $spend)
-                        <div class="flex justify-between mt-4 border border-gray-200 shadow-md rounded-lg py-1 px-4">
+                        <div class="flex justify-between mt-4 border border-gray-200 shadow-md rounded-lg py-1 px-4 spend-card cursor-pointer"
+                            data-id="{{ $spend->id }}">
                             <div>
                                 <p class="font-semibold">{{ $spend->title }}</p>
                                 <p>{{ $spend->description }}</p>
@@ -146,6 +149,7 @@
                         </div>
                     @endforeach
                 </div>
+
             </div>
         </div>
     </main>
