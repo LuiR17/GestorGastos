@@ -32,3 +32,6 @@ function openModal(spend) {
     modal.classList.remove("hidden");
 }
 
+document.getElementById("closeModal").addEventListener("click", function () {
+    document.getElementById("spendModal").classList.add("hidden");
+});
