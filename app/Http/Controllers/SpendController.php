@@ -77,8 +77,12 @@ class SpendController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Spend $spend)
     {
-        //
+        $spend->delete();
+
+        return response()->json([
+            'message' => 'Gasto eliminado'
+        ]);
     }
 }

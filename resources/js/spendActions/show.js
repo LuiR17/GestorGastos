@@ -17,6 +17,8 @@ document.addEventListener("click", function (e) {
 function openModal(spend) {
     const modal = document.getElementById("spendModal");
 
+    modal.dataset.id = spend.id;
+
     if (!modal) {
         console.error("Modal no encontrado");
         return;
