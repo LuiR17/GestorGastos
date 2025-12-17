@@ -15,6 +15,7 @@
     'resources/js/CreateCreditCard',
     'resources/js/spendActions/show',
     'resources/js/spendActions/delete',
+    'resources/js/spendActions/edit',
     ])
 
     

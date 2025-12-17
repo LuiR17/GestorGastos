@@ -30,6 +30,12 @@ function openModal(spend) {
         spend.description ?? "Sin descripcion";
     document.getElementById("modalAmount").textContent = `$${spend.price}`;
 
+    modal.querySelector("#editTitle").value = spend.title;
+    modal.querySelector("#editDescription").value = spend.description ?? "";
+    modal.querySelector("#editPrice").value = spend.price;
+
+    resetEditMode();
+
     // Mostramos el modal
     modal.classList.remove("hidden");
 }
@@ -37,3 +43,4 @@ function openModal(spend) {
 document.getElementById("closeModal").addEventListener("click", function () {
     document.getElementById("spendModal").classList.add("hidden");
 });
+

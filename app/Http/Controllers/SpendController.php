@@ -5,14 +5,15 @@ namespace App\Http\Controllers;
 use App\Models\Spend;
 use Illuminate\Http\Request;
 use App\Http\Requests\Spend\CreateSpendRequest;
+use App\Http\Requests\Spend\UpdateSpendRequest;
 use App\Services\Spend\SpendService;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+
 
 class SpendController extends Controller
 {
-    public function __construct(protected SpendService $service)
-    {
-    }
+    public function __construct(protected SpendService $service) {}
     /**
      * Display a listing of the resource.
      */
@@ -43,7 +44,6 @@ class SpendController extends Controller
             'message' => 'Gasto creado correctamente',
             'data' => $spend
         ]);
-
     }
 
     /**
@@ -55,7 +55,6 @@ class SpendController extends Controller
         return response()->json([
             'data' => $spend
         ]);
-
     }
 
     /**
@@ -69,9 +68,17 @@ class SpendController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(UpdateSpendRequest $request, Spend $spend)
     {
         //
+
+       
+        $spend->update($request->validated());
+
+        return response()->json([
+            'message' => 'Actualizado',
+            'data' => $spend
+        ]);
     }
 
     /**
