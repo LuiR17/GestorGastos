@@ -41,91 +41,26 @@
                     <p>$7</p>
                 </div>
             </div>
-            <div class="flex justify-between w-[70%] mt-2">
-                <div class="flex gap-4">
-                    <p>logo</p>
-                    <p>Nombre Cuenta</p>
-                </div>
-
-                <div>
-                    <p>$7</p>
-                </div>
-            </div>
-            <div class="flex justify-between w-[70%] mt-2">
-                <div class="flex gap-4">
-                    <p>logo</p>
-                    <p>Nombre Cuenta</p>
-                </div>
-
-                <div>
-                    <p>$7</p>
-                </div>
-            </div>
-            <div class="flex justify-between w-[70%] mt-2">
-                <div class="flex gap-4">
-                    <p>logo</p>
-                    <p>Nombre Cuenta</p>
-                </div>
-
-                <div>
-                    <p>$7</p>
-                </div>
-            </div>
-            <div class="flex justify-between w-[70%] mt-2">
-                <div class="flex gap-4">
-                    <p>logo</p>
-                    <p>Nombre Cuenta</p>
-                </div>
-
-                <div>
-                    <p>$7</p>
-                </div>
-            </div>
-            <div class="flex justify-between w-[70%] mt-2">
-                <div class="flex gap-4">
-                    <p>logo</p>
-                    <p>Nombre Cuenta</p>
-                </div>
-
-                <div>
-                    <p>$7</p>
-                </div>
-            </div>
             <div class="flex justify-between w-[70%]">
                 <p class="p-2 font-semibold">Tarjetas de crédito</p>
                 <button id="createCardBtn" class="border border-gray-200 shadow-md rounded-lg px-4">Crear +</button>
                 <x-create-card-form id="modalCard" title="Nueva Tarjeta" />
             </div>
-            <div class="flex justify-between w-[70%] mt-2">
-                <div class="flex gap-4">
-                    <p>logo</p>
-                    <p>Nombre Cuenta</p>
-                </div>
+            <div id="accountsContainer">
+                <div class="flex justify-between w-[70%] mt-2">
+                     
+                    <div class="flex gap-4">
+                        <p>logo</p>
+                        <p>Nombre Cuenta</p>
+                    </div>
 
-                <div>
-                    <p>$7</p>
+                    <div>
+                        <p>$7</p>
+                    </div>
+                    
                 </div>
             </div>
-            <div class="flex justify-between w-[70%] mt-2">
-                <div class="flex gap-4">
-                    <p>logo</p>
-                    <p>Nombre Cuenta</p>
-                </div>
 
-                <div>
-                    <p>$7</p>
-                </div>
-            </div>
-            <div class="flex justify-between w-[70%] mt-2">
-                <div class="flex gap-4">
-                    <p>logo</p>
-                    <p>Nombre Cuenta</p>
-                </div>
-
-                <div>
-                    <p>$7</p>
-                </div>
-            </div>
         </div>
 
         <div class="flex flex-col items-center">

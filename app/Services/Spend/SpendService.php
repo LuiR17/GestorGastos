@@ -4,7 +4,6 @@ namespace App\Services\Spend;
 
 use App\Models\Spend;
 use Illuminate\Support\Facades\Auth;
-use App\Models\User;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 
 class SpendService

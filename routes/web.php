@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SpendController;
+use App\Http\Controllers\AccountController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -9,6 +10,7 @@ Route::get('/', function () {
 });
 
 Route::resource('spends', SpendController::class);
+Route::resource('accounts', AccountController::class);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
