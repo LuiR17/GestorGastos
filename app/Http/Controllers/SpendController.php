@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Auth;
 
 class SpendController extends Controller
 {
-    public function __construct(protected SpendService $service) {}
+    public function __construct(protected SpendService $service, protected AccountService $account) {}
     /**
      * Display a listing of the resource.
      */
@@ -22,7 +22,8 @@ class SpendController extends Controller
     {
         //
         $spends = $this->service->getAll();
-        return view('spend.index', compact('spends'));
+        $accounts = $this->account->getAll();
+        return view('spend.index', compact('spends', 'accounts'));
     }
 
     /**

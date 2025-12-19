@@ -22,12 +22,9 @@ class CreateAccountRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
-            'logo' => 'required|image|mimes:jpeg,png,jpg,svg|max:2048',
-            'service_name' => 'required|string|max:100',
+            'service_name' => 'required|string|max:250',
             'price' => 'required|numeric|min:0',
-            'renovation' => 'required',
-            
+            'renovation' => 'date|required',
         ];
     }
 }

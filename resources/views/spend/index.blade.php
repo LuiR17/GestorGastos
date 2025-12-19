@@ -31,34 +31,25 @@
                     +</button>
                 <x-create-form id="modalAccount" title="Nueva Cuenta" />
             </div>
-            <div class="flex justify-between w-[70%] mt-2">
-                <div class="flex gap-4">
-                    <p>logo</p>
-                    <p>Nombre Cuenta</p>
-                </div>
+            <div id="accountsContainer" class="flex flex-col gap-4 w-[70%] mt-2">
+                @foreach ($accounts as $account)
+                    <div class="flex justify-between w-full py-1 px-4">
 
-                <div>
-                    <p>$7</p>
-                </div>
+                        <div class="flex gap-4">
+
+                            <p class="font-semibold"> {{ $account->service_name }} </p>
+                        </div>
+
+                        <div>
+                            <p>{{ $account->price }}</p>
+                        </div>
+                    </div>
+                @endforeach
             </div>
             <div class="flex justify-between w-[70%]">
                 <p class="p-2 font-semibold">Tarjetas de crédito</p>
                 <button id="createCardBtn" class="border border-gray-200 shadow-md rounded-lg px-4">Crear +</button>
                 <x-create-card-form id="modalCard" title="Nueva Tarjeta" />
-            </div>
-            <div id="accountsContainer">
-                <div class="flex justify-between w-[70%] mt-2">
-                     
-                    <div class="flex gap-4">
-                        <p>logo</p>
-                        <p>Nombre Cuenta</p>
-                    </div>
-
-                    <div>
-                        <p>$7</p>
-                    </div>
-                    
-                </div>
             </div>
 
         </div>

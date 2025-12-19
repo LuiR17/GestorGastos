@@ -33,8 +33,7 @@ class AccountController extends Controller
      */
     public function store(CreateAccountRequest $request)
     {
-        //
-        $account = $this->service->create($request->validate());
+        $account = $this->service->create($request->validated());
 
         return response()->json([
             'message' => 'Cuenta creada correctamente',
