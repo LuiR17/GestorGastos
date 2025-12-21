@@ -73,8 +73,6 @@ class SpendController extends Controller
     public function update(UpdateSpendRequest $request, Spend $spend)
     {
         //
-
-       
         $spend->update($request->validated());
 
         return response()->json([

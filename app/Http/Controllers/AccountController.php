@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\Account\CreateAccountRequest;
+use App\Http\Requests\Account\UpdateAccountRequest;
+use App\Http\Requests\Spend\UpdateSpendRequest;
+use App\Models\Accounts;
 use App\Services\Account\AccountService;
 
 class AccountController extends Controller
@@ -64,9 +67,15 @@ class AccountController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(UpdateAccountRequest $request, Accounts $account)
     {
         //
+        $account->update($request->validated());
+
+        return response()->json([
+            'message' => 'Actualizado',
+            'data' => $account
+        ]);
     }
 
     /**

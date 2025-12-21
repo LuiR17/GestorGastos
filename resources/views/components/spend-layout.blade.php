@@ -18,7 +18,7 @@
     'resources/js/spendActions/edit',
     'resources/js/AccountActions/create',
     'resources/js/AccountActions/show',
-
+    'resources/js/AccountActions/edit',
     ])
 
     
