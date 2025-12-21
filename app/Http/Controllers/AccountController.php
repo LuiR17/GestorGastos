@@ -46,7 +46,11 @@ class AccountController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $account = $this->service->getById($id);
+
+        return response()->json([
+            'data' => $account
+        ]);
     }
 
     /**

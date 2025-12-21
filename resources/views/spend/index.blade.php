@@ -32,8 +32,9 @@
                 <x-create-form id="modalAccount" title="Nueva Cuenta" />
             </div>
             <div id="accountsContainer" class="flex flex-col gap-4 w-[70%] mt-2">
+                <x-show-account-modal id="accountModal" title="Detalles de cuenta"/> 
                 @foreach ($accounts as $account)
-                    <div class="flex justify-between w-full py-1 px-4">
+                    <div class="flex justify-between w-full py-1 px-4 cursor-pointer account-card" data-id="{{ $account->id }}">
 
                         <div class="flex gap-4">
 

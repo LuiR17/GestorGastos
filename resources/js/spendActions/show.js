@@ -1,5 +1,3 @@
-
-
 document.addEventListener("click", function (e) {
     const card = e.target.closest(".spend-card");
 

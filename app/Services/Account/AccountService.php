@@ -20,4 +20,9 @@ class AccountService
         $data['user_id'] = Auth::id();
         return Accounts::create($data); 
     }
+
+    public function getById(string $id): Accounts
+    {
+        return Accounts::findOrFail($id);
+    }
 }
