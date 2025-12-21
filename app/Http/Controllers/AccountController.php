@@ -81,8 +81,12 @@ class AccountController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Accounts $account)
     {
-        //
+        $account->delete();
+
+        return response()->json([
+            'message' => 'Cuenta Eliminada'
+        ]);
     }
 }
