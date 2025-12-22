@@ -9,12 +9,13 @@ use App\Http\Requests\Spend\UpdateSpendRequest;
 use App\Services\Spend\SpendService;
 use App\Services\Account\AccountService;
 use App\Models\User;
+use App\Services\Card\CardServise;
 use Illuminate\Support\Facades\Auth;
 
 
 class SpendController extends Controller
 {
-    public function __construct(protected SpendService $service, protected AccountService $account) {}
+    public function __construct(protected SpendService $service, protected AccountService $account, protected CardServise $card_servise) {}
     /**
      * Display a listing of the resource.
      */
@@ -23,7 +24,8 @@ class SpendController extends Controller
         //
         $spends = $this->service->getAll();
         $accounts = $this->account->getAll();
-        return view('spend.index', compact('spends', 'accounts'));
+        $cards = $this->card_servise->getAll();
+        return view('spend.index', compact('spends', 'accounts', 'cards'));
     }
 
     /**

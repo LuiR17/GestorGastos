@@ -46,5 +46,3 @@ function addAccountCard(account) {
     container.prepend(card);
 }
 
-
-console.log("hola desde create");

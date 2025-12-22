@@ -52,7 +52,22 @@
                 <button id="createCardBtn" class="border border-gray-200 shadow-md rounded-lg px-4">Crear +</button>
                 <x-create-card-form id="modalCard" title="Nueva Tarjeta" />
             </div>
+            <div id="cardsContainer" class="flex flex-col gap-4 w-[70%] mt-2">
+                <x-show-account-modal id="cardsModal" title="Detalles de la tarjeta"/> 
+                @foreach ($cards as $card)
+                    <div class="flex justify-between w-full py-1 px-4 cursor-pointer account-card" data-id="{{ $account->id }}">
 
+                        <div class="flex gap-4">
+
+                            <p class="font-semibold"> {{ $card->card_name }} </p>
+                        </div>
+
+                        <div>
+                            <p>{{ $card->credit_limit }}</p>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
         </div>
 
         <div class="flex flex-col items-center">

@@ -21,4 +21,6 @@ class CreditCards extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public const PAGINATE = 10;
 }

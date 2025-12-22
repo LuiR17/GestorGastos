@@ -20,6 +20,8 @@
     'resources/js/AccountActions/show',
     'resources/js/AccountActions/edit',
     'resources/js/AccountActions/delete',
+    'resources/js/CreditCardActions/create',
+
     ])
 
     
